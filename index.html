@@ -233,8 +233,8 @@
           if (printCharacteristic == null) {
             navigator.bluetooth.requestDevice({
               filters: [{
-                // services: ['000018f0-0000-1000-8000-00805f9b34fb']
-                services: ['7a9b5e5f-f664-36ad-b6d9-d55d1a3dedfB']
+                services: ['000018f0-0000-1000-8000-00805f9b34fb']
+                // services: ['7a9b5e5f-f664-36ad-b6d9-d55d1a3dedfB']
               }]
             })
             .then(device => {
