@@ -86,7 +86,7 @@
 
       <paper-card id="logo">
         <div class="card-content">
-          <image id="image" src="bluetooth_PNG27.png" width="200px"></image>
+          <image id="image" src="qr.png" width="200px"></image>
         </div>
       </paper-card>
 
@@ -215,6 +215,7 @@
           // Add line feed + carriage return chars to text
           let text = encoder.encode(message.value + '\u000A\u000D');
           return printCharacteristic.writeValue(text).then(() => {
+            console.log(text);
             console.log('Write done.');
           });
         }
@@ -224,7 +225,7 @@
           sendImageData()
           .then(sendTextData)
           .then(() => {
-            progress.hidden = true;
+            progress.hidden = false;
           })
           .catch(handleError);
         }
