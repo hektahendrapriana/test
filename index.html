@@ -242,10 +242,10 @@
               console.log('Connecting to GATT Server...');
               return device.gatt.connect();
             })
-            .then(server => server.getPrimaryService("000018f0-0000-1000-8000-00805f9b34fb"))
-            // .then(server => server.getPrimaryService("7A9B5E5F-F664-36AD-B6D9-D55D1A3DEDFB"))
-            .then(service => service.getCharacteristic("00002af1-0000-1000-8000-00805f9b34fb"))
-            // .then(service => service.getCharacteristic("7A9B5E5F-F664-36AD-B6D9-D55D1A3DEDFB"))
+            // .then(server => server.getPrimaryService("000018f0-0000-1000-8000-00805f9b34fb"))
+            .then(server => server.getPrimaryService("7A9B5E5F-F664-36AD-B6D9-D55D1A3DEDFB"))
+            // .then(service => service.getCharacteristic("00002af1-0000-1000-8000-00805f9b34fb"))
+            .then(service => service.getCharacteristic("00002af1-F664-36AD-B6D9-D55D1A3DEDFB"))
             .then(characteristic => {
               // Cache the characteristic
               printCharacteristic = characteristic;
